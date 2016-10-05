@@ -1,5 +1,6 @@
 #include<iostream.h>
 #include<conio.h>
+#include<process.h>
 
 struct node
 {	int info;
@@ -17,7 +18,7 @@ void main()
 	temp=NULL;
 	ptr=NULL;
 	int element,choice;
-	do
+	while(1)
 	{	clrscr();
 		cout<<"\n~~~~~~~~~~~~~~~~~";
 		cout<<"\n~~~~~~MENU~~~~~~~";
@@ -38,11 +39,11 @@ void main()
 				getch();	break;
 			case 3:peep(top);
 				getch();	break;
-			case 4:continue;
+			case 4:exit(0);
 			default:cout<<"\nEnter choice again\n";
 				getch();
 		}
-	}while(choice!=4);
+	}
 }
 
 node* create_new_node(int n)
